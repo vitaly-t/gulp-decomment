@@ -1,7 +1,6 @@
 gulp-decomment
 ==============
 
-Removes comments from JSON or JavaScript.
+Removes comments from JSON, JavaScript, CSS and HTML. 
 
-**This library is currently under development.**
-
+# HELP WANTED!
