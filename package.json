@@ -2,16 +2,21 @@
   "name": "gulp-decomment",
   "version": "0.0.1",
   "description": "Removes comments from JSON or JavaScript.",
-  "main": "lib/index.js",
   "scripts": {
-    "test": "jasmine-node test",
-    "coverage": "istanbul cover ./node_modules/jasmine-node/bin/jasmine-node test",
-    "travis": "istanbul cover ./node_modules/jasmine-node/bin/jasmine-node test --captureExceptions && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "test": "mocha"
   },
   "files": [
-    "test",
     "index.js"
   ],
+  "dependencies": {
+    "decomment": "^0.4.x",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.0.2"
+  },
   "homepage": "https://github.com/vitaly-t/gulp-decomment",
   "repository": {
     "type": "git",
@@ -30,16 +35,5 @@
     "name": "Vitaly Tomilov",
     "email": "vitaly.tomilov@gmail.com"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=0.10",
-    "npm": ">=1.4"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {
-    "coveralls": "2.x",
-    "istanbul": "0.4",
-    "jasmine-node": "1.x"
-  }
+  "license": "MIT"
 }
