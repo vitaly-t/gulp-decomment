@@ -9,7 +9,7 @@
     "index.js"
   ],
   "dependencies": {
-    "decomment": "^0.4.x",
+    "decomment": "^0.6.2",
     "gulp-util": "^3.0.7",
     "through2": "^2.0.0"
   },
