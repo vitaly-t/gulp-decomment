@@ -1,7 +1,7 @@
 gulp-decomment
 ==============
 
-Removes comments from JSON, JavaScript, CSS and HTML.
+> [decomment](https://github.com/vitaly-t/decomment/) - Removes comments from JSON, JavaScript, CSS and HTML.
 
 ## Install
 
@@ -51,3 +51,8 @@ as it can break your regular expressions.
 Unlike the default **decomment** method, it instructs the library not to parse
 or validate the input in any way, rather assume it to be HTML, and remove all
 `<!-- comment -->` entries from it according to the `options`.
+
+## License
+
+Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
+Released under the MIT license.
