@@ -1,6 +1,6 @@
 {
   "name": "gulp-decomment",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Removes comments from JSON, JavaScript, CSS, HTML, etc.",
   "scripts": {
     "test": "jasmine-node test",
