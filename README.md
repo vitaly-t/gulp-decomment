@@ -1,12 +1,26 @@
 gulp-decomment
 ==============
 
-> [decomment](https://github.com/vitaly-t/decomment/) - Removes comments from JSON, JavaScript, CSS and HTML.
+Uses [decomment] to remove comments from JSON, JavaScript, CSS, HTML, etc.
 
-## Install
+[![Build Status](https://travis-ci.org/vitaly-t/gulp-decomment.svg?branch=master)](https://travis-ci.org/vitaly-t/gulp-decomment)
+[![Coverage Status](https://coveralls.io/repos/vitaly-t/gulp-decomment/badge.svg?branch=master)](https://coveralls.io/r/vitaly-t/gulp-decomment?branch=master)
 
-```sh
-$ npm install --save-dev gulp-decomment
+## Installing
+
+```
+$ npm install gulp-decomment
+```
+
+## Testing
+
+```
+$ npm test
+```
+
+Testing with coverage:
+```
+$ npm run coverage
 ```
 
 ## Usage
@@ -56,3 +70,5 @@ or validate the input in any way, rather assume it to be HTML, and remove all
 
 Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
+
+[decomment]:https://github.com/vitaly-t/decomment
