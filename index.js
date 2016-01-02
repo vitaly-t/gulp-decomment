@@ -1,9 +1,9 @@
 'use strict';
 
 var through = require('through2');
-var gutil = require('gulp-util');
+var util = require('gulp-util');
 var decomment = require('decomment');
-var PluginError = gutil.PluginError;
+var PluginError = util.PluginError;
 
 var PLUGIN_NAME = 'gulp-decomment';
 
@@ -12,23 +12,15 @@ function main(options, func) {
     var opts = options || {};
 
     var stream = through.obj(function (file, enc, cb) {
-
         if (file.isNull()) {
             cb(null, file);
             return;
         }
-
         if (file.isStream()) {
-            cb(new PluginError(PLUGIN_NAME, 'Streaming not supported'));
-            return;
+            cb(new PluginError(PLUGIN_NAME, 'Streaming not supported.'));
         }
-
-        if (file.isBuffer()) {
-            file.contents = new Buffer(func(file.contents.toString(), opts));
-        }
-
+        file.contents = new Buffer(func(file.contents.toString(), opts));
         this.push(file);
-
         return cb();
     });
 
