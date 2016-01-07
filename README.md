@@ -31,7 +31,7 @@ var decomment = require('gulp-decomment');
 
 gulp.task('default', function () {
   return gulp.src('input.js')
-    .pipe(decomment())
+    .pipe(decomment({trim: true}))
     .pipe(gulp.dest('dest'));
 });
 ```
@@ -39,9 +39,10 @@ gulp.task('default', function () {
 ## API
 
 Available methods, according to [decomment API](https://github.com/vitaly-t/decomment#api):
-* [decomment([options])](https://github.com/vitaly-t/decomment#decommentcode-options--string)
-* [decomment.text([options])](https://github.com/vitaly-t/decomment#decommenttexttext-options--string)
-* [decomment.html([options])](https://github.com/vitaly-t/decomment#decommenthtmlhtml-options--string)
+
+#### [decomment([options])](https://github.com/vitaly-t/decomment#decommentcode-options--string)
+#### [decomment.text([options])](https://github.com/vitaly-t/decomment#decommenttexttext-options--string)
+#### [decomment.html([options])](https://github.com/vitaly-t/decomment#decommenthtmlhtml-options--string)
 
 ## License
 
