@@ -1,8 +1,8 @@
 'use strict';
 
-var through = require('through2');
-var decomment = require('decomment');
-var PluginError = require('gulp-util').PluginError;
+const through = require('through2');
+const decomment = require('decomment');
+const PluginError = require('gulp-util').PluginError;
 
 function main(options, func) {
     return through.obj(function (file, enc, cb) {
@@ -11,7 +11,7 @@ function main(options, func) {
             return;
         }
         if (file.isStream()) {
-            cb(new PluginError("gulp-decomment", "Streaming not supported."));
+            cb(new PluginError('gulp-decomment', 'Streaming not supported.'));
         }
         file.contents = new Buffer(func(file.contents.toString(), options));
         this.push(file);
