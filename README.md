@@ -9,7 +9,7 @@ Uses [decomment] to remove comments from JSON, JavaScript, CSS, HTML, etc.
 ## Installing
 
 ```
-$ npm install gulp-decomment
+$ npm i gulp-decomment
 ```
 
 ## Testing
@@ -26,14 +26,14 @@ $ npm run coverage
 ## Usage
 
 ```js
-var gulp = require('gulp');
-var decomment = require('gulp-decomment');
+const gulp = require('gulp');
+const decomment = require('gulp-decomment');
 
-gulp.task('default', function () {
-  return gulp.src('input.js')
+gulp.task('default', () => 
+    gulp.src('input.js')
     .pipe(decomment({trim: true}))
-    .pipe(gulp.dest('dest'));
-});
+    .pipe(gulp.dest('dest'))
+);
 ```
 
 ## API
@@ -46,7 +46,7 @@ Available methods, according to [decomment API](https://github.com/vitaly-t/deco
 
 ## License
 
-Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
+Copyright © 2021 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
 
 [decomment]:https://github.com/vitaly-t/decomment
