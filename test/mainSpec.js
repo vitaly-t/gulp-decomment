@@ -1,7 +1,8 @@
 'use strict';
 
 const decomment = require('../');
-const util = require('gulp-util');
+const Vinyl = require('vinyl');
+const PluginError = require('plugin-error');
 const stream = require('stream');
 
 ////////////////////////
@@ -88,14 +89,14 @@ describe('Negative:', () => {
                 err = e;
                 done();
             }
-            expect(err instanceof util.PluginError);
+            expect(err instanceof PluginError);
             expect(err.message).toBe('Streaming not supported.');
         });
     });
 });
 
 function getFakeDest(content) {
-    return new util.File({
+    return new Vinyl({
         path: './test/fixture/test.js',
         cwd: './test/',
         base: './test/fixture/',
@@ -104,7 +105,7 @@ function getFakeDest(content) {
 }
 
 function getBuffer(bufferContent) {
-    return getFakeDest(new Buffer(bufferContent));
+    return getFakeDest(Buffer.from(bufferContent));
 }
 
 function getNull() {
